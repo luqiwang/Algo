@@ -15,7 +15,7 @@ public class DecodeStr {
                 while (i < arr.length && arr[i] == '-') {
                     i++;
                 }
-                if (i == arr.length) return new String(arr);
+                if (i == arr.length) break;
                 if (arr[i] == arr[l]) {
                     for (int j = l; j <= i; j++) arr[j] = arr[i];
                 }
