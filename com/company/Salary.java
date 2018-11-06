@@ -3,7 +3,7 @@ package com.company;
 public class Salary {
     public static void main(String[] args) {
         Double[][] taxes = {{1000.0,0.1},{2000.0,0.2},{null, 0.4}};
-        System.out.println(compute(5000, taxes));
+        System.out.println(compute(3000, taxes));
     }
     public static double compute(int num, Double[][] taxes) {
         int ans = 0;

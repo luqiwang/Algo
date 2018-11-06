@@ -56,7 +56,6 @@ public class SparseVector {
         }
         return ans;
     }
-    // Two pointer
     public static int vectorProduct3(int[][] a, int[][] b) {
         int i = 0;
         int j = 0;
