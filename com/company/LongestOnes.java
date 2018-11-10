@@ -12,11 +12,11 @@ public class LongestOnes {
         int count = 0;
         int ans = 0;
         while (r < nums.length) {
-            if (nums[r] == 1) {
+            if (nums[r] == 0) {
                 count++;
             }
-            while (r - l + 1 - count > k) {
-                if (nums[l] == 1) {
+            while (count > k) {
+                if (nums[l] == 0) {
                     count--;
                 }
                 l++;

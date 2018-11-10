@@ -8,6 +8,14 @@ public class IntervalCover {
         int[] target = {2, 15};
         System.out.println(cover(target, inters));
     }
+    static class Point{
+        int pos;
+        boolean isStart;
+        public Point (int pos, boolean isStart) {
+            this.pos = pos;
+            this.isStart = isStart;
+        }
+    }
     public static int cover(int[] target, int[][] intervals) {
         Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
         int i = 0;

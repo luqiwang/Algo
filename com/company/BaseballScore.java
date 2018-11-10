@@ -9,7 +9,7 @@ public class BaseballScore {
     public static int numerOfWasy(int point) {
         int[][] dp = new int[point + 1][2];
         dp[0][0] = 1;
-        dp[0][1] =0;
+        dp[0][1] = 0;
         for (int i = 1; i <= point; i++) {
             if (i - 2 >= 0) dp[i][0] += dp[i - 2][0];
             if (i - 3 >= 0) dp[i][0] += dp[i - 3][0];

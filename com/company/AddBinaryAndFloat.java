@@ -5,8 +5,12 @@ public class AddBinaryAndFloat {
 //        System.out.println(add("ABC", "BF2D", 16));
 //        System.out.println(add("99", "1", 10));
 //        System.out.println(add("1", "10", 2));
-        System.out.println(addFloat("9.2", "2.45"));
+        System.out.println(addFloat("9.2", "2"));
     }
+    public static String add2(String a, String b) {
+        return "";
+    }
+
     public static String add(String a, String b, int k) {
         if (a == null || a.length() == 0) return b;
         if (b == null || b.length() == 0) return a;
@@ -15,6 +19,12 @@ public class AddBinaryAndFloat {
         int i = a.length() - 1;
         int j = b.length() - 1;
         while (i >= 0 || j >= 0) {
+            if (a.charAt(i) == '.') {
+                i--;
+                j--;
+                sb.append('.');
+                continue;
+            }
             int num1 = i >=0 ? Character.getNumericValue(a.charAt(i)) : 0;
             int num2 = j >=0 ? Character.getNumericValue(b.charAt(j)) : 0;
             int sum = num1 + num2 + carry;
